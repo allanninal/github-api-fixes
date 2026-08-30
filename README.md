@@ -31,6 +31,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [the deploy key is read-only and the push needs write](./deploy-key-read-only-assumed-write/) — https://www.allanninal.dev/github/deploy-key-read-only-assumed-write/
 - [the same webhook URL is registered on the org and the repo](./duplicate-webhooks/) — https://www.allanninal.dev/github/duplicate-webhooks/
 - [the endpoint ignores page and returns page one forever](./endpoint-ignores-page-param/) — https://www.allanninal.dev/github/endpoint-ignores-page-param/
+- [The client is pointed at the wrong GitHub host entirely](./enterprise-endpoint-on-dotcom/) — https://www.allanninal.dev/github/enterprise-endpoint-on-dotcom/
 - [rotating the token invalidates every cached ETag at once](./etag-invalidated-by-token-rotation/) — https://www.allanninal.dev/github/etag-invalidated-by-token-rotation/
 - [A 403 that means the feature is disabled, not the permission](./feature-disabled-endpoint-403/) — https://www.allanninal.dev/github/feature-disabled-endpoint-403/
 - [A fine-grained token that is waiting for an org owner](./fine-grained-pat-pending-approval/) — https://www.allanninal.dev/github/fine-grained-pat-pending-approval/
@@ -55,12 +56,15 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [a GitHub App JWT that expires in an hour is refused](./jwt-exp-too-far-future/) — https://www.allanninal.dev/github/jwt-exp-too-far-future/
 - [the App JWT is signed with the wrong key or algorithm](./jwt-wrong-key-or-algorithm/) — https://www.allanninal.dev/github/jwt-wrong-key-or-algorithm/
 - [only the first page is read because the Link header is ignored](./link-header-not-followed/) — https://www.allanninal.dev/github/link-header-not-followed/
+- [GitHub answers 404 for the wrong verb, never 405](./missing-endpoint-404-vs-405/) — https://www.allanninal.dev/github/missing-endpoint-404-vs-405/
 - [the endpoint accepts a scope your token was never given](./missing-oauth-scope/) — https://www.allanninal.dev/github/missing-oauth-scope/
 - [polling without ETags spends full quota on unchanged data](./no-conditional-requests/) — https://www.allanninal.dev/github/no-conditional-requests/
 - [The org restricts OAuth Apps and this one was never approved](./oauth-app-access-restricted/) — https://www.allanninal.dev/github/oauth-app-access-restricted/
 - [one user revoked your app and only their token is dead](./oauth-token-revoked-by-user/) — https://www.allanninal.dev/github/oauth-token-revoked-by-user/
 - [Enforcing 2FA removed the machine account from the org](./org-2fa-requirement-removed-member/) — https://www.allanninal.dev/github/org-2fa-requirement-removed-member/
 - [The org's base permission dropped and repos vanished](./org-base-permission-changed/) — https://www.allanninal.dev/github/org-base-permission-changed/
+- [The org caps token lifetime below your rotation interval](./org-token-lifetime-policy/) — https://www.allanninal.dev/github/org-token-lifetime-policy/
+- [An outside collaborator has repos in an org, not the org](./outside-collaborator-invisible-org-data/) — https://www.allanninal.dev/github/outside-collaborator-invisible-org-data/
 - [a read-only job holds a token that can delete repositories](./over-scoped-token/) — https://www.allanninal.dev/github/over-scoped-token/
 - [per_page is unset so every list costs 3.3x more requests](./per-page-default-30/) — https://www.allanninal.dev/github/per-page-default-30/
 - [per_page above 100 is clamped and never rejected](./per-page-over-100-clamped/) — https://www.allanninal.dev/github/per-page-over-100-clamped/
@@ -91,6 +95,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [rows move between pages and the walk skips records](./unstable-sort-duplicates/) — https://www.allanninal.dev/github/unstable-sort-duplicates/
 - [a pinned X-GitHub-Api-Version stopped being supported](./unsupported-api-version/) — https://www.allanninal.dev/github/unsupported-api-version/
 - [a classic token nobody used for a year is deleted for you](./unused-classic-token-auto-revoked/) — https://www.allanninal.dev/github/unused-classic-token-auto-revoked/
+- [The signature audit reads verified and never reads reason](./unverified-commit-signature-assumed/) — https://www.allanninal.dev/github/unverified-commit-signature-assumed/
 - [every request 403s because there is no User-Agent header](./user-agent-missing/) — https://www.allanninal.dev/github/user-agent-missing/
 - [the hook sends form-encoded bodies to a JSON receiver](./webhook-content-type-mismatch/) — https://www.allanninal.dev/github/webhook-content-type-mismatch/
 - [webhook deliveries are failing and nobody reads the log](./webhook-deliveries-failing/) — https://www.allanninal.dev/github/webhook-deliveries-failing/
