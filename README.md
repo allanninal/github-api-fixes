@@ -22,12 +22,17 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [the GitHub App has no webhook URL configured](./app-webhook-url-unset/) — https://www.allanninal.dev/github/app-webhook-url-unset/
 - [401 Bad credentials on every endpoint, even public ones](./bad-credentials-401/) — https://www.allanninal.dev/github/bad-credentials-401/
 - [the client still sends a username and password to the API](./basic-auth-password-removed/) — https://www.allanninal.dev/github/basic-auth-password-removed/
+- [branch protection is unreadable without admin, not absent](./branch-protection-requires-admin/) — https://www.allanninal.dev/github/branch-protection-requires-admin/
 - [a classic PAT passed its expiry and everything broke at once](./classic-pat-expired/) — https://www.allanninal.dev/github/classic-pat-expired/
 - [code search is billed to its own 10 a minute bucket](./code-search-bucket-exhausted/) — https://www.allanninal.dev/github/code-search-bucket-exhausted/
+- [The scope is right, the account's role on the repo is read](./collaborator-permission-insufficient/) — https://www.allanninal.dev/github/collaborator-permission-insufficient/
 - [the compare endpoint stops at 250 commits and says nothing](./compare-250-commit-cap/) — https://www.allanninal.dev/github/compare-250-commit-cap/
+- [the deploy key is read-only and the push needs write](./deploy-key-read-only-assumed-write/) — https://www.allanninal.dev/github/deploy-key-read-only-assumed-write/
 - [the same webhook URL is registered on the org and the repo](./duplicate-webhooks/) — https://www.allanninal.dev/github/duplicate-webhooks/
 - [the endpoint ignores page and returns page one forever](./endpoint-ignores-page-param/) — https://www.allanninal.dev/github/endpoint-ignores-page-param/
 - [rotating the token invalidates every cached ETag at once](./etag-invalidated-by-token-rotation/) — https://www.allanninal.dev/github/etag-invalidated-by-token-rotation/
+- [A 403 that means the feature is disabled, not the permission](./feature-disabled-endpoint-403/) — https://www.allanninal.dev/github/feature-disabled-endpoint-403/
+- [Every call succeeds and reports on a fork, not the upstream](./fork-vs-upstream-confusion/) — https://www.allanninal.dev/github/fork-vs-upstream-confusion/
 - [GraphQL returns 200 with an errors array and null data](./graphql-200-with-errors/) — https://www.allanninal.dev/github/graphql-200-with-errors/
 - [Nobody measured what the GraphQL query actually costs](./graphql-cost-not-measured/) — https://www.allanninal.dev/github/graphql-cost-not-measured/
 - [A GraphQL connection asks for first: 500 and is rejected](./graphql-first-over-100/) — https://www.allanninal.dev/github/graphql-first-over-100/
@@ -56,9 +61,12 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [the x-poll-interval header is ignored on events endpoints](./poll-interval-header-ignored/) — https://www.allanninal.dev/github/poll-interval-header-ignored/
 - [the integration polls for events a webhook would push](./polling-instead-of-webhooks/) — https://www.allanninal.dev/github/polling-instead-of-webhooks/
 - [a pull request's files and commits lists are both capped](./pr-files-and-commits-caps/) — https://www.allanninal.dev/github/pr-files-and-commits-caps/
+- [A repository went private and anonymous callers now see 404](./private-repo-visibility-changed/) — https://www.allanninal.dev/github/private-repo-visibility-changed/
 - [core REST quota is exhausted and every call returns 403](./rate-limit-core-exhausted/) — https://www.allanninal.dev/github/rate-limit-core-exhausted/
 - [requests go out anonymous and are capped at 60 an hour](./rate-limit-unauthenticated/) — https://www.allanninal.dev/github/rate-limit-unauthenticated/
 - [the Link header has no rel=last so the page count breaks](./rel-last-absent/) — https://www.allanninal.dev/github/rel-last-absent/
+- [the repository is archived so every write returns 403](./repo-archived-writes-403/) — https://www.allanninal.dev/github/repo-archived-writes-403/
+- [the repository is disabled and behaves like a ghost](./repo-disabled/) — https://www.allanninal.dev/github/repo-disabled/
 - [the repository was renamed and every call now 301s](./repo-renamed-301-redirect/) — https://www.allanninal.dev/github/repo-renamed-301-redirect/
 - [expensive requests are killed at ten seconds with a 502](./request-timeout-502/) — https://www.allanninal.dev/github/request-timeout-502/
 - [403 Resource not accessible by personal access token](./resource-not-accessible-by-pat/) — https://www.allanninal.dev/github/resource-not-accessible-by-pat/
