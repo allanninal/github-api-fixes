@@ -12,10 +12,12 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 
 - [a permission error is disguised as 404 Not Found](./404-masking-403/) — https://www.allanninal.dev/github/404-masking-403/
 - [GITHUB_TOKEN gets 1,000 an hour, shared across the repo](./actions-token-repo-scoped-limit/) — https://www.allanninal.dev/github/actions-token-repo-scoped-limit/
+- [a hardcoded installation id stops matching reality](./app-installation-id-hardcoded/) — https://www.allanninal.dev/github/app-installation-id-hardcoded/
 - [a 404 that means the App is not installed on that repo](./app-not-installed-on-repo/) — https://www.allanninal.dev/github/app-not-installed-on-repo/
 - [the App was never subscribed to the event it waits for](./app-not-subscribed-to-event/) — https://www.allanninal.dev/github/app-not-subscribed-to-event/
 - [resource not accessible by integration on one endpoint](./app-permission-missing/) — https://www.allanninal.dev/github/app-permission-missing/
 - [a new App permission that installers never accepted](./app-permission-upgrade-not-accepted/) — https://www.allanninal.dev/github/app-permission-upgrade-not-accepted/
+- [the App's rate limit never grew with the installation](./app-rate-limit-not-scaling/) — https://www.allanninal.dev/github/app-rate-limit-not-scaling/
 - [the installation token was narrowed below what the job needs](./app-token-scoped-down-too-far/) — https://www.allanninal.dev/github/app-token-scoped-down-too-far/
 - [401 Bad credentials on every endpoint, even public ones](./bad-credentials-401/) — https://www.allanninal.dev/github/bad-credentials-401/
 - [the client still sends a username and password to the API](./basic-auth-password-removed/) — https://www.allanninal.dev/github/basic-auth-password-removed/
@@ -55,7 +57,13 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [every request 403s because there is no User-Agent header](./user-agent-missing/) — https://www.allanninal.dev/github/user-agent-missing/
 - [webhook deliveries are failing and nobody reads the log](./webhook-deliveries-failing/) — https://www.allanninal.dev/github/webhook-deliveries-failing/
 - [the hook is not subscribed to the event you are waiting for](./webhook-event-not-subscribed/) — https://www.allanninal.dev/github/webhook-event-not-subscribed/
+- [the webhook posts your payloads to an http:// URL](./webhook-http-url/) — https://www.allanninal.dev/github/webhook-http-url/
+- [the webhook exists but somebody switched it off](./webhook-inactive/) — https://www.allanninal.dev/github/webhook-inactive/
+- [SSL verification is switched off on the webhook](./webhook-insecure-ssl/) — https://www.allanninal.dev/github/webhook-insecure-ssl/
 - [a webhook with no secret sends no signature to verify](./webhook-no-secret/) — https://www.allanninal.dev/github/webhook-no-secret/
+- [the receiver still checks the legacy SHA-1 signature](./webhook-sha1-signature-only/) — https://www.allanninal.dev/github/webhook-sha1-signature-only/
+- [the receiver takes longer than 10 seconds and times out](./webhook-timeout-10s/) — https://www.allanninal.dev/github/webhook-timeout-10s/
+- [the hook subscribes to every event with a wildcard](./webhook-wildcard-events/) — https://www.allanninal.dev/github/webhook-wildcard-events/
 - [a JWT sent as token, and the 401 blames the credential](./wrong-authorization-scheme/) — https://www.allanninal.dev/github/wrong-authorization-scheme/
 - [the automation runs as a person who can leave the company](./wrong-identity-token/) — https://www.allanninal.dev/github/wrong-identity-token/
 
