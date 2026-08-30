@@ -13,6 +13,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [a permission error is disguised as 404 Not Found](./404-masking-403/) — https://www.allanninal.dev/github/404-masking-403/
 - [GITHUB_TOKEN gets 1,000 an hour, shared across the repo](./actions-token-repo-scoped-limit/) — https://www.allanninal.dev/github/actions-token-repo-scoped-limit/
 - [a hardcoded installation id stops matching reality](./app-installation-id-hardcoded/) — https://www.allanninal.dev/github/app-installation-id-hardcoded/
+- [The App installation was requested and never approved](./app-installation-request-pending/) — https://www.allanninal.dev/github/app-installation-request-pending/
 - [a 404 that means the App is not installed on that repo](./app-not-installed-on-repo/) — https://www.allanninal.dev/github/app-not-installed-on-repo/
 - [the App was never subscribed to the event it waits for](./app-not-subscribed-to-event/) — https://www.allanninal.dev/github/app-not-subscribed-to-event/
 - [resource not accessible by integration on one endpoint](./app-permission-missing/) — https://www.allanninal.dev/github/app-permission-missing/
@@ -32,6 +33,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [the endpoint ignores page and returns page one forever](./endpoint-ignores-page-param/) — https://www.allanninal.dev/github/endpoint-ignores-page-param/
 - [rotating the token invalidates every cached ETag at once](./etag-invalidated-by-token-rotation/) — https://www.allanninal.dev/github/etag-invalidated-by-token-rotation/
 - [A 403 that means the feature is disabled, not the permission](./feature-disabled-endpoint-403/) — https://www.allanninal.dev/github/feature-disabled-endpoint-403/
+- [A fine-grained token that is waiting for an org owner](./fine-grained-pat-pending-approval/) — https://www.allanninal.dev/github/fine-grained-pat-pending-approval/
 - [Every call succeeds and reports on a fork, not the upstream](./fork-vs-upstream-confusion/) — https://www.allanninal.dev/github/fork-vs-upstream-confusion/
 - [GraphQL returns 200 with an errors array and null data](./graphql-200-with-errors/) — https://www.allanninal.dev/github/graphql-200-with-errors/
 - [Nobody measured what the GraphQL query actually costs](./graphql-cost-not-measured/) — https://www.allanninal.dev/github/graphql-cost-not-measured/
@@ -48,13 +50,17 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [the installation is suspended and every call it makes 403s](./installation-suspended/) — https://www.allanninal.dev/github/installation-suspended/
 - [the installation token expired an hour into the job](./installation-token-expired/) — https://www.allanninal.dev/github/installation-token-expired/
 - [some endpoints refuse an installation token whatever it holds](./installation-token-rejected-by-endpoint/) — https://www.allanninal.dev/github/installation-token-rejected-by-endpoint/
+- [The org's IP allow list refuses the runner, not the token](./ip-allow-list-blocks-requests/) — https://www.allanninal.dev/github/ip-allow-list-blocks-requests/
 - [clock drift puts the JWT iat claim in GitHub's future](./jwt-clock-drift-iat/) — https://www.allanninal.dev/github/jwt-clock-drift-iat/
 - [a GitHub App JWT that expires in an hour is refused](./jwt-exp-too-far-future/) — https://www.allanninal.dev/github/jwt-exp-too-far-future/
 - [the App JWT is signed with the wrong key or algorithm](./jwt-wrong-key-or-algorithm/) — https://www.allanninal.dev/github/jwt-wrong-key-or-algorithm/
 - [only the first page is read because the Link header is ignored](./link-header-not-followed/) — https://www.allanninal.dev/github/link-header-not-followed/
 - [the endpoint accepts a scope your token was never given](./missing-oauth-scope/) — https://www.allanninal.dev/github/missing-oauth-scope/
 - [polling without ETags spends full quota on unchanged data](./no-conditional-requests/) — https://www.allanninal.dev/github/no-conditional-requests/
+- [The org restricts OAuth Apps and this one was never approved](./oauth-app-access-restricted/) — https://www.allanninal.dev/github/oauth-app-access-restricted/
 - [one user revoked your app and only their token is dead](./oauth-token-revoked-by-user/) — https://www.allanninal.dev/github/oauth-token-revoked-by-user/
+- [Enforcing 2FA removed the machine account from the org](./org-2fa-requirement-removed-member/) — https://www.allanninal.dev/github/org-2fa-requirement-removed-member/
+- [The org's base permission dropped and repos vanished](./org-base-permission-changed/) — https://www.allanninal.dev/github/org-base-permission-changed/
 - [a read-only job holds a token that can delete repositories](./over-scoped-token/) — https://www.allanninal.dev/github/over-scoped-token/
 - [per_page is unset so every list costs 3.3x more requests](./per-page-default-30/) — https://www.allanninal.dev/github/per-page-default-30/
 - [per_page above 100 is clamped and never rejected](./per-page-over-100-clamped/) — https://www.allanninal.dev/github/per-page-over-100-clamped/
@@ -72,6 +78,8 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [403 Resource not accessible by personal access token](./resource-not-accessible-by-pat/) — https://www.allanninal.dev/github/resource-not-accessible-by-pat/
 - [the client ignores retry-after and keeps hammering the API](./retry-after-ignored/) — https://www.allanninal.dev/github/retry-after-ignored/
 - [org lists silently omit SSO-enforced organizations](./saml-partial-results/) — https://www.allanninal.dev/github/saml-partial-results/
+- [The SAML session lapsed and the authorization went with it](./saml-session-expired/) — https://www.allanninal.dev/github/saml-session-expired/
+- [The token is valid and was never SSO-authorized for the org](./saml-token-not-authorized/) — https://www.allanninal.dev/github/saml-token-not-authorized/
 - [search returns at most 1,000 results whatever total_count says](./search-1000-result-cap/) — https://www.allanninal.dev/github/search-1000-result-cap/
 - [search has its own 30-per-minute bucket and drains separately](./search-bucket-exhausted/) — https://www.allanninal.dev/github/search-bucket-exhausted/
 - [incomplete_results is true and the search answer is partial](./search-incomplete-results/) — https://www.allanninal.dev/github/search-incomplete-results/
