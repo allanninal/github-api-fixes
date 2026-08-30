@@ -28,6 +28,10 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [the same webhook URL is registered on the org and the repo](./duplicate-webhooks/) — https://www.allanninal.dev/github/duplicate-webhooks/
 - [the endpoint ignores page and returns page one forever](./endpoint-ignores-page-param/) — https://www.allanninal.dev/github/endpoint-ignores-page-param/
 - [rotating the token invalidates every cached ETag at once](./etag-invalidated-by-token-rotation/) — https://www.allanninal.dev/github/etag-invalidated-by-token-rotation/
+- [GraphQL returns 200 with an errors array and null data](./graphql-200-with-errors/) — https://www.allanninal.dev/github/graphql-200-with-errors/
+- [A nested GraphQL query requests more than 500,000 nodes](./graphql-node-limit-exceeded/) — https://www.allanninal.dev/github/graphql-node-limit-exceeded/
+- [GraphQL data is present but individual fields are null](./graphql-partial-data-nulls/) — https://www.allanninal.dev/github/graphql-partial-data-nulls/
+- [GraphQL points run out in a bucket separate from REST](./graphql-rate-limited/) — https://www.allanninal.dev/github/graphql-rate-limited/
 - [the installation covers only some repositories, silently](./installation-repository-selection-partial/) — https://www.allanninal.dev/github/installation-repository-selection-partial/
 - [the installation is suspended and every call it makes 403s](./installation-suspended/) — https://www.allanninal.dev/github/installation-suspended/
 - [the installation token expired an hour into the job](./installation-token-expired/) — https://www.allanninal.dev/github/installation-token-expired/
@@ -44,9 +48,12 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [per_page above 100 is clamped and never rejected](./per-page-over-100-clamped/) — https://www.allanninal.dev/github/per-page-over-100-clamped/
 - [the x-poll-interval header is ignored on events endpoints](./poll-interval-header-ignored/) — https://www.allanninal.dev/github/poll-interval-header-ignored/
 - [the integration polls for events a webhook would push](./polling-instead-of-webhooks/) — https://www.allanninal.dev/github/polling-instead-of-webhooks/
+- [a pull request's files and commits lists are both capped](./pr-files-and-commits-caps/) — https://www.allanninal.dev/github/pr-files-and-commits-caps/
 - [core REST quota is exhausted and every call returns 403](./rate-limit-core-exhausted/) — https://www.allanninal.dev/github/rate-limit-core-exhausted/
 - [requests go out anonymous and are capped at 60 an hour](./rate-limit-unauthenticated/) — https://www.allanninal.dev/github/rate-limit-unauthenticated/
 - [the Link header has no rel=last so the page count breaks](./rel-last-absent/) — https://www.allanninal.dev/github/rel-last-absent/
+- [the repository was renamed and every call now 301s](./repo-renamed-301-redirect/) — https://www.allanninal.dev/github/repo-renamed-301-redirect/
+- [expensive requests are killed at ten seconds with a 502](./request-timeout-502/) — https://www.allanninal.dev/github/request-timeout-502/
 - [the client ignores retry-after and keeps hammering the API](./retry-after-ignored/) — https://www.allanninal.dev/github/retry-after-ignored/
 - [org lists silently omit SSO-enforced organizations](./saml-partial-results/) — https://www.allanninal.dev/github/saml-partial-results/
 - [search returns at most 1,000 results whatever total_count says](./search-1000-result-cap/) — https://www.allanninal.dev/github/search-1000-result-cap/
@@ -57,6 +64,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [a hot endpoint burns 900 points a minute and gets throttled](./secondary-limit-points-per-minute/) — https://www.allanninal.dev/github/secondary-limit-points-per-minute/
 - [the token expires in days and nothing is watching the clock](./token-expiring-soon/) — https://www.allanninal.dev/github/token-expiring-soon/
 - [the token is passed as an access_token query parameter](./token-in-query-string/) — https://www.allanninal.dev/github/token-in-query-string/
+- [rows move between pages and the walk skips records](./unstable-sort-duplicates/) — https://www.allanninal.dev/github/unstable-sort-duplicates/
 - [a pinned X-GitHub-Api-Version stopped being supported](./unsupported-api-version/) — https://www.allanninal.dev/github/unsupported-api-version/
 - [a classic token nobody used for a year is deleted for you](./unused-classic-token-auto-revoked/) — https://www.allanninal.dev/github/unused-classic-token-auto-revoked/
 - [every request 403s because there is no User-Agent header](./user-agent-missing/) — https://www.allanninal.dev/github/user-agent-missing/
