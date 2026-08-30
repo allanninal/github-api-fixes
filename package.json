@@ -1,0 +1,11 @@
+{
+  "name": "github-api-fixes",
+  "version": "1.0.0",
+  "description": "Read-only Python and Node.js scripts that find GitHub API problems \u2014 pagination that stops at the first page, 404s masking 403s, webhooks failing unnoticed and Apps missing a permission. They report and print the repair; they never write",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT"
+}
