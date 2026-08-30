@@ -29,9 +29,16 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [the endpoint ignores page and returns page one forever](./endpoint-ignores-page-param/) — https://www.allanninal.dev/github/endpoint-ignores-page-param/
 - [rotating the token invalidates every cached ETag at once](./etag-invalidated-by-token-rotation/) — https://www.allanninal.dev/github/etag-invalidated-by-token-rotation/
 - [GraphQL returns 200 with an errors array and null data](./graphql-200-with-errors/) — https://www.allanninal.dev/github/graphql-200-with-errors/
+- [Nobody measured what the GraphQL query actually costs](./graphql-cost-not-measured/) — https://www.allanninal.dev/github/graphql-cost-not-measured/
+- [A GraphQL connection asks for first: 500 and is rejected](./graphql-first-over-100/) — https://www.allanninal.dev/github/graphql-first-over-100/
+- [GraphQL node ids get stored where REST ids are expected](./graphql-id-vs-databaseid/) — https://www.allanninal.dev/github/graphql-id-vs-databaseid/
+- [A mutation costs five secondary points, a query costs one](./graphql-mutation-secondary-cost/) — https://www.allanninal.dev/github/graphql-mutation-secondary-cost/
+- [Nested GraphQL connections truncate at 100 per parent](./graphql-nested-pagination-ignored/) — https://www.allanninal.dev/github/graphql-nested-pagination-ignored/
 - [A nested GraphQL query requests more than 500,000 nodes](./graphql-node-limit-exceeded/) — https://www.allanninal.dev/github/graphql-node-limit-exceeded/
 - [GraphQL data is present but individual fields are null](./graphql-partial-data-nulls/) — https://www.allanninal.dev/github/graphql-partial-data-nulls/
 - [GraphQL points run out in a bucket separate from REST](./graphql-rate-limited/) — https://www.allanninal.dev/github/graphql-rate-limited/
+- [GraphQL search stops at the same 1,000 results as REST](./graphql-search-same-1000-cap/) — https://www.allanninal.dev/github/graphql-search-same-1000-cap/
+- [A GraphQL query times out at 10s and is charged anyway](./graphql-timeout-point-penalty/) — https://www.allanninal.dev/github/graphql-timeout-point-penalty/
 - [the installation covers only some repositories, silently](./installation-repository-selection-partial/) — https://www.allanninal.dev/github/installation-repository-selection-partial/
 - [the installation is suspended and every call it makes 403s](./installation-suspended/) — https://www.allanninal.dev/github/installation-suspended/
 - [the installation token expired an hour into the job](./installation-token-expired/) — https://www.allanninal.dev/github/installation-token-expired/
@@ -54,6 +61,7 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [the Link header has no rel=last so the page count breaks](./rel-last-absent/) — https://www.allanninal.dev/github/rel-last-absent/
 - [the repository was renamed and every call now 301s](./repo-renamed-301-redirect/) — https://www.allanninal.dev/github/repo-renamed-301-redirect/
 - [expensive requests are killed at ten seconds with a 502](./request-timeout-502/) — https://www.allanninal.dev/github/request-timeout-502/
+- [403 Resource not accessible by personal access token](./resource-not-accessible-by-pat/) — https://www.allanninal.dev/github/resource-not-accessible-by-pat/
 - [the client ignores retry-after and keeps hammering the API](./retry-after-ignored/) — https://www.allanninal.dev/github/retry-after-ignored/
 - [org lists silently omit SSO-enforced organizations](./saml-partial-results/) — https://www.allanninal.dev/github/saml-partial-results/
 - [search returns at most 1,000 results whatever total_count says](./search-1000-result-cap/) — https://www.allanninal.dev/github/search-1000-result-cap/
