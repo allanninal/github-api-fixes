@@ -12,7 +12,11 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 
 - [a permission error is disguised as 404 Not Found](./404-masking-403/) — https://www.allanninal.dev/github/404-masking-403/
 - [GITHUB_TOKEN gets 1,000 an hour, shared across the repo](./actions-token-repo-scoped-limit/) — https://www.allanninal.dev/github/actions-token-repo-scoped-limit/
+- [a 404 that means the App is not installed on that repo](./app-not-installed-on-repo/) — https://www.allanninal.dev/github/app-not-installed-on-repo/
+- [the App was never subscribed to the event it waits for](./app-not-subscribed-to-event/) — https://www.allanninal.dev/github/app-not-subscribed-to-event/
 - [resource not accessible by integration on one endpoint](./app-permission-missing/) — https://www.allanninal.dev/github/app-permission-missing/
+- [a new App permission that installers never accepted](./app-permission-upgrade-not-accepted/) — https://www.allanninal.dev/github/app-permission-upgrade-not-accepted/
+- [the installation token was narrowed below what the job needs](./app-token-scoped-down-too-far/) — https://www.allanninal.dev/github/app-token-scoped-down-too-far/
 - [401 Bad credentials on every endpoint, even public ones](./bad-credentials-401/) — https://www.allanninal.dev/github/bad-credentials-401/
 - [the client still sends a username and password to the API](./basic-auth-password-removed/) — https://www.allanninal.dev/github/basic-auth-password-removed/
 - [a classic PAT passed its expiry and everything broke at once](./classic-pat-expired/) — https://www.allanninal.dev/github/classic-pat-expired/
@@ -21,8 +25,12 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [the same webhook URL is registered on the org and the repo](./duplicate-webhooks/) — https://www.allanninal.dev/github/duplicate-webhooks/
 - [rotating the token invalidates every cached ETag at once](./etag-invalidated-by-token-rotation/) — https://www.allanninal.dev/github/etag-invalidated-by-token-rotation/
 - [the installation covers only some repositories, silently](./installation-repository-selection-partial/) — https://www.allanninal.dev/github/installation-repository-selection-partial/
+- [the installation is suspended and every call it makes 403s](./installation-suspended/) — https://www.allanninal.dev/github/installation-suspended/
+- [the installation token expired an hour into the job](./installation-token-expired/) — https://www.allanninal.dev/github/installation-token-expired/
 - [some endpoints refuse an installation token whatever it holds](./installation-token-rejected-by-endpoint/) — https://www.allanninal.dev/github/installation-token-rejected-by-endpoint/
+- [clock drift puts the JWT iat claim in GitHub's future](./jwt-clock-drift-iat/) — https://www.allanninal.dev/github/jwt-clock-drift-iat/
 - [a GitHub App JWT that expires in an hour is refused](./jwt-exp-too-far-future/) — https://www.allanninal.dev/github/jwt-exp-too-far-future/
+- [the App JWT is signed with the wrong key or algorithm](./jwt-wrong-key-or-algorithm/) — https://www.allanninal.dev/github/jwt-wrong-key-or-algorithm/
 - [only the first page is read because the Link header is ignored](./link-header-not-followed/) — https://www.allanninal.dev/github/link-header-not-followed/
 - [the endpoint accepts a scope your token was never given](./missing-oauth-scope/) — https://www.allanninal.dev/github/missing-oauth-scope/
 - [polling without ETags spends full quota on unchanged data](./no-conditional-requests/) — https://www.allanninal.dev/github/no-conditional-requests/
