@@ -16,9 +16,13 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [the same webhook URL is registered on the org and the repo](./duplicate-webhooks/) — https://www.allanninal.dev/github/duplicate-webhooks/
 - [the installation covers only some repositories, silently](./installation-repository-selection-partial/) — https://www.allanninal.dev/github/installation-repository-selection-partial/
 - [only the first page is read because the Link header is ignored](./link-header-not-followed/) — https://www.allanninal.dev/github/link-header-not-followed/
+- [polling without ETags spends full quota on unchanged data](./no-conditional-requests/) — https://www.allanninal.dev/github/no-conditional-requests/
 - [per_page is unset so every list costs 3.3x more requests](./per-page-default-30/) — https://www.allanninal.dev/github/per-page-default-30/
+- [the client ignores retry-after and keeps hammering the API](./retry-after-ignored/) — https://www.allanninal.dev/github/retry-after-ignored/
 - [org lists silently omit SSO-enforced organizations](./saml-partial-results/) — https://www.allanninal.dev/github/saml-partial-results/
 - [search returns at most 1,000 results whatever total_count says](./search-1000-result-cap/) — https://www.allanninal.dev/github/search-1000-result-cap/
+- [over 100 concurrent requests trips a secondary rate limit](./secondary-limit-concurrency/) — https://www.allanninal.dev/github/secondary-limit-concurrency/
+- [bulk issue or comment creation exceeds 80 requests a minute](./secondary-limit-content-creation/) — https://www.allanninal.dev/github/secondary-limit-content-creation/
 - [webhook deliveries are failing and nobody reads the log](./webhook-deliveries-failing/) — https://www.allanninal.dev/github/webhook-deliveries-failing/
 - [the hook is not subscribed to the event you are waiting for](./webhook-event-not-subscribed/) — https://www.allanninal.dev/github/webhook-event-not-subscribed/
 - [a webhook with no secret sends no signature to verify](./webhook-no-secret/) — https://www.allanninal.dev/github/webhook-no-secret/
