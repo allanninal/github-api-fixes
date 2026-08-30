@@ -19,12 +19,14 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [a new App permission that installers never accepted](./app-permission-upgrade-not-accepted/) — https://www.allanninal.dev/github/app-permission-upgrade-not-accepted/
 - [the App's rate limit never grew with the installation](./app-rate-limit-not-scaling/) — https://www.allanninal.dev/github/app-rate-limit-not-scaling/
 - [the installation token was narrowed below what the job needs](./app-token-scoped-down-too-far/) — https://www.allanninal.dev/github/app-token-scoped-down-too-far/
+- [the GitHub App has no webhook URL configured](./app-webhook-url-unset/) — https://www.allanninal.dev/github/app-webhook-url-unset/
 - [401 Bad credentials on every endpoint, even public ones](./bad-credentials-401/) — https://www.allanninal.dev/github/bad-credentials-401/
 - [the client still sends a username and password to the API](./basic-auth-password-removed/) — https://www.allanninal.dev/github/basic-auth-password-removed/
 - [a classic PAT passed its expiry and everything broke at once](./classic-pat-expired/) — https://www.allanninal.dev/github/classic-pat-expired/
 - [code search is billed to its own 10 a minute bucket](./code-search-bucket-exhausted/) — https://www.allanninal.dev/github/code-search-bucket-exhausted/
 - [the compare endpoint stops at 250 commits and says nothing](./compare-250-commit-cap/) — https://www.allanninal.dev/github/compare-250-commit-cap/
 - [the same webhook URL is registered on the org and the repo](./duplicate-webhooks/) — https://www.allanninal.dev/github/duplicate-webhooks/
+- [the endpoint ignores page and returns page one forever](./endpoint-ignores-page-param/) — https://www.allanninal.dev/github/endpoint-ignores-page-param/
 - [rotating the token invalidates every cached ETag at once](./etag-invalidated-by-token-rotation/) — https://www.allanninal.dev/github/etag-invalidated-by-token-rotation/
 - [the installation covers only some repositories, silently](./installation-repository-selection-partial/) — https://www.allanninal.dev/github/installation-repository-selection-partial/
 - [the installation is suspended and every call it makes 403s](./installation-suspended/) — https://www.allanninal.dev/github/installation-suspended/
@@ -39,14 +41,17 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [one user revoked your app and only their token is dead](./oauth-token-revoked-by-user/) — https://www.allanninal.dev/github/oauth-token-revoked-by-user/
 - [a read-only job holds a token that can delete repositories](./over-scoped-token/) — https://www.allanninal.dev/github/over-scoped-token/
 - [per_page is unset so every list costs 3.3x more requests](./per-page-default-30/) — https://www.allanninal.dev/github/per-page-default-30/
+- [per_page above 100 is clamped and never rejected](./per-page-over-100-clamped/) — https://www.allanninal.dev/github/per-page-over-100-clamped/
 - [the x-poll-interval header is ignored on events endpoints](./poll-interval-header-ignored/) — https://www.allanninal.dev/github/poll-interval-header-ignored/
 - [the integration polls for events a webhook would push](./polling-instead-of-webhooks/) — https://www.allanninal.dev/github/polling-instead-of-webhooks/
 - [core REST quota is exhausted and every call returns 403](./rate-limit-core-exhausted/) — https://www.allanninal.dev/github/rate-limit-core-exhausted/
 - [requests go out anonymous and are capped at 60 an hour](./rate-limit-unauthenticated/) — https://www.allanninal.dev/github/rate-limit-unauthenticated/
+- [the Link header has no rel=last so the page count breaks](./rel-last-absent/) — https://www.allanninal.dev/github/rel-last-absent/
 - [the client ignores retry-after and keeps hammering the API](./retry-after-ignored/) — https://www.allanninal.dev/github/retry-after-ignored/
 - [org lists silently omit SSO-enforced organizations](./saml-partial-results/) — https://www.allanninal.dev/github/saml-partial-results/
 - [search returns at most 1,000 results whatever total_count says](./search-1000-result-cap/) — https://www.allanninal.dev/github/search-1000-result-cap/
 - [search has its own 30-per-minute bucket and drains separately](./search-bucket-exhausted/) — https://www.allanninal.dev/github/search-bucket-exhausted/
+- [incomplete_results is true and the search answer is partial](./search-incomplete-results/) — https://www.allanninal.dev/github/search-incomplete-results/
 - [over 100 concurrent requests trips a secondary rate limit](./secondary-limit-concurrency/) — https://www.allanninal.dev/github/secondary-limit-concurrency/
 - [bulk issue or comment creation exceeds 80 requests a minute](./secondary-limit-content-creation/) — https://www.allanninal.dev/github/secondary-limit-content-creation/
 - [a hot endpoint burns 900 points a minute and gets throttled](./secondary-limit-points-per-minute/) — https://www.allanninal.dev/github/secondary-limit-points-per-minute/
@@ -55,12 +60,15 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/github](http
 - [a pinned X-GitHub-Api-Version stopped being supported](./unsupported-api-version/) — https://www.allanninal.dev/github/unsupported-api-version/
 - [a classic token nobody used for a year is deleted for you](./unused-classic-token-auto-revoked/) — https://www.allanninal.dev/github/unused-classic-token-auto-revoked/
 - [every request 403s because there is no User-Agent header](./user-agent-missing/) — https://www.allanninal.dev/github/user-agent-missing/
+- [the hook sends form-encoded bodies to a JSON receiver](./webhook-content-type-mismatch/) — https://www.allanninal.dev/github/webhook-content-type-mismatch/
 - [webhook deliveries are failing and nobody reads the log](./webhook-deliveries-failing/) — https://www.allanninal.dev/github/webhook-deliveries-failing/
 - [the hook is not subscribed to the event you are waiting for](./webhook-event-not-subscribed/) — https://www.allanninal.dev/github/webhook-event-not-subscribed/
 - [the webhook posts your payloads to an http:// URL](./webhook-http-url/) — https://www.allanninal.dev/github/webhook-http-url/
 - [the webhook exists but somebody switched it off](./webhook-inactive/) — https://www.allanninal.dev/github/webhook-inactive/
 - [SSL verification is switched off on the webhook](./webhook-insecure-ssl/) — https://www.allanninal.dev/github/webhook-insecure-ssl/
+- [a firewall allow-list no longer matches GitHub's hook IPs](./webhook-ip-allowlist-drift/) — https://www.allanninal.dev/github/webhook-ip-allowlist-drift/
 - [a webhook with no secret sends no signature to verify](./webhook-no-secret/) — https://www.allanninal.dev/github/webhook-no-secret/
+- [the webhook secret is set and has never been rotated](./webhook-secret-never-rotated/) — https://www.allanninal.dev/github/webhook-secret-never-rotated/
 - [the receiver still checks the legacy SHA-1 signature](./webhook-sha1-signature-only/) — https://www.allanninal.dev/github/webhook-sha1-signature-only/
 - [the receiver takes longer than 10 seconds and times out](./webhook-timeout-10s/) — https://www.allanninal.dev/github/webhook-timeout-10s/
 - [the hook subscribes to every event with a wildcard](./webhook-wildcard-events/) — https://www.allanninal.dev/github/webhook-wildcard-events/
